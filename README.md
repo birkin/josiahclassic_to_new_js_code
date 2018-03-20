@@ -1,20 +1,18 @@
 ### about ###
 
-hay_aeon_classic.js builds a link in [Classic Josiah](https://josiah.brown.edu) to hand off to the [Aeon](http://www.atlas-sys.com/aeon/) service of the [John Hay Library](https://en.wikipedia.org/wiki/John_Hay_Library).
+josiahclassic_to_new_link.js builds a link in our [old](https://josiah.brown.edu) classic-josiah website to hand off to our [new](https://search.library.brown.edu) Josiah search-interface.
 
 
 ### notes ###
 
-- under development -- intial repo code is based on jcb work
+- under development -- intial repo code is based on previous classic-josiah js work
 
 - Code flow overview:
     - determines if page is a bib -- if not, stops; if so...
-    - grabs title, author, publisher, and digital-url if available
-    - for each row...
-        - grabs callnumber
-        - builds and displays link
+    - grabs bib
+    - builds and displays link
 
-- hay_aeon_classic.js code contact: birkin_diana@brown.edu
+- code contact: birkin_diana@brown.edu
 
 ---
 
