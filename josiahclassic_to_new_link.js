@@ -92,11 +92,10 @@ var biblink_flow_manager = new function() {
     /* Attaches object to DOM.
      * Called by build_link_html()
      */
-
     var permalink_element = document.querySelector( "#recordnum" );
     // var permalink_div = document.querySelector( ".bibRecordLink" );
-    var full_html = "<br/>" + a.toString()
-    permalink_element.insertAdjacentHTML( "afterend", full_html )
+    permalink_element.insertAdjacentElement( "afterend", a );
+    permalink_element.insertAdjacentHTML( "afterend", "<br/>" );
   }
 
 };  // end namespace biblink_flow_manager, ```var biblink_flow_manager = new function() {```
