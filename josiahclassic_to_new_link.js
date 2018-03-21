@@ -81,6 +81,7 @@ var biblink_flow_manager = new function() {
     var a = document.createElement( "a" );
     a.href = full_newjosiah_url;
     a.setAttribute( "class", "bib_link" );
+    a.setAttribute( "title", "Depending on the item, additional requesting services may be available." );
     var link_text = document.createTextNode( "More Item Services" );
     a.appendChild( link_text );
     console.log( "- a, " + a );
