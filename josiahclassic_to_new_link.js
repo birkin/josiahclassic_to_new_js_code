@@ -32,9 +32,9 @@ var biblink_flow_manager = new function() {
     all_html = $("body").html().toString();  // jquery already loaded (whew)
     var index = all_html.indexOf( 'class="bib_link"' );
     if (index != -1) {
-      console.log( "- aready run" );
+      console.log( "- bib_link to new-josiah aready run" );
     } else {
-      console.log( "- not already run" );
+      console.log( "- bib_link to new-josiah not already run" );
       check_page_type();
     }
   }
@@ -61,7 +61,6 @@ var biblink_flow_manager = new function() {
     var segments = url_string.split( "=" )[1];
     bibnum = segments.slice( 0,8 );
     console.log( "- bibnum, " + bibnum );
-    // grab_bib_info();
     build_url();
   }
 
@@ -81,11 +80,11 @@ var biblink_flow_manager = new function() {
     var a = document.createElement( "a" );
     a.href = full_newjosiah_url;
     a.setAttribute( "class", "bib_link" );
-    a.setAttribute( "title", "Depending on the item, additional requesting services may be available." );
-    var link_text = document.createTextNode( "More Item Services" );
+    a.setAttribute( "style", "color:red;" )
+    a.setAttribute( "title", "additional services may be available for this item" );
+    var link_text = document.createTextNode( "Request Services for this item" );
     a.appendChild( link_text );
-    console.log( "- a, " + a );
-    console.log( "- a.toString(), " + a.toString() );
+    console.log( "- a object created" );
     attach_html( a );
   }
 
@@ -94,9 +93,9 @@ var biblink_flow_manager = new function() {
      * Called by build_link_html()
      */
     var permalink_element = document.querySelector( "#recordnum" );
-    // var permalink_div = document.querySelector( ".bibRecordLink" );
     permalink_element.insertAdjacentElement( "afterend", a );
-    permalink_element.insertAdjacentHTML( "afterend", "<br/>" );
+    permalink_element.insertAdjacentHTML( "afterend", '<br style="margin-bottom:10em;padding-bottom:10em"></br>' );
+    console.log( "- link to new-josiah attached" )
   }
 
 };  // end namespace biblink_flow_manager, ```var biblink_flow_manager = new function() {```
